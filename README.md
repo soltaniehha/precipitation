@@ -3,13 +3,14 @@ Precipitation Forcast
 
 A Mathematica project, Short-Term Precipitation Forcast!
 
+This project was done in a 3-week work at Wolfram Science Summer School 2014 under supervision of Stephen Wolfram.
+
+
 ## Files Description
 
 There are three Mathematica notebooks in this project and one needs Mathematica version 10 to open these files. [finalProject_Demo.nb](https://github.com/soltaniehha/precipitation/blob/master/finalProject_Demo.nb) is a demo version and only for demonstration of the project. If you wants to try the code by yourself then may want to use the other two notebooks. The code [UWeather.nb](https://github.com/soltaniehha/precipitation/blob/master/UWeather.nb) needs to be running at least for an hour in order to take and save the radar images from the Weather Underground API before you can start the real time calculation, file [finalProject_RealTime.nb](https://github.com/soltaniehha/precipitation/blob/master/finalProject_RealTime.nb).
 
 ## Project Description
-
-This project was done in a 3-week work at Wolfram Science Summer School 2014 under supervision of Stephen Wolfram.
 
 Base reflectivity radar images contain information about the structure of the clouds, how dense they are and whether they carry water or hail. The unit of reflectivity is on dBZ (decibels) which is a logarithmic scale and the values normally vary from 5 dBZ to 75 dBZ. Typically light rain occurs when this reaches 20 dBZ. The purpose of this project is to track the clouds and see when they are reaching a given location on the map and whether it's going to rain or not for the next hour or so. Also a rough picture of the location and size of the clouds in the near future can be predicted. The cloud images are taken from Weather Underground API every 6 minutes for the state of Massachusetts and the information about the clouds are derived by images processing, stored as a time-dependent database for each image, and analyzed their behavior by predictive modeling. 
 
