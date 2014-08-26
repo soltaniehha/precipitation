@@ -1,7 +1,7 @@
 Precipitation Forcast
 =============
 
-Short-Term Precipitation Forcast, A Mathematica project.
+A Mathematica project, Short-Term Precipitation Forcast!
 
 ## Files Description
 
@@ -15,7 +15,7 @@ Base reflectivity radar images contain information about the structure of the cl
 
 We are able to predict the precipitation by looking at the circle area shown in the image and see if there is a rainfall happening. If we observe some precipitation most likely it's going to happen in the targeted location, which is Boston in our example. In order to check the precipitation one can use the radar data and check whether the value for reflectivity is indicating rain or not, or make a query from either Wolfram language or Weather Underground API current condition. Averaging these values might result a better prediction since each data may have a different source. For this particular example shown here the circle is drawn one hour apart based on the speed of the clouds calculated by the program.
 
-One can use this code to download radar images every 6 minutes from Weather Underground API: UWeather.nb This UWeather.nb code needs to be running for at least 60 minutes, and after that running in the background, in order to have enough data for starting the actual prediction application which is finalProject_realTime_Version2.0.nb.
+One can use this code to download radar images every 6 minutes from Weather Underground API: UWeather.nb This UWeather.nb code needs to be running for at least 60 minutes, and after that running in the background, in order to have enough data for starting the actual prediction application which is (finalProject_RealTime.nb)[https://github.com/soltaniehha/precipitation/blob/master/finalProject_RealTime.nb].
 
 And this program will do the rest for real time: finalProject_realTime_Version2.0.nb.
 
