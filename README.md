@@ -1,7 +1,7 @@
 Precipitation Forcast
 =============
 
-Short-Term Precipitation Forcast
+Short-Term Precipitation Forcast, A Mathematica project.
 
 ## Files Description
 
