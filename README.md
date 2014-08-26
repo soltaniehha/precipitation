@@ -5,7 +5,7 @@ A Mathematica project, Short-Term Precipitation Forcast!
 
 ## Files Description
 
-There are three Mathematica notebooks in this project and one needs Mathematica 10 to open these files. "finalProject_Demo.nb" is a demo version and called and is only for demonstration of the project. If you want to try the code for yourself you may want to use the other two notebooks. The code "UWeather.nb" needs to be running at least for one hour in order to get and save the radar images from the Weather Underground API before you can start the real time calculation, file "finalProject_RealTime.nb".
+There are three Mathematica notebooks in this project and one needs Mathematica version 10 to open these files. [finalProject_Demo.nb](https://github.com/soltaniehha/precipitation/blob/master/finalProject_Demo.nb) is a demo version and only for demonstration of the project. If you wants to try the code by yourself then may want to use the other two notebooks. The code [UWeather.nb](https://github.com/soltaniehha/precipitation/blob/master/UWeather.nb) needs to be running at least for an hour in order to take and save the radar images from the Weather Underground API before you can start the real time calculation, file [finalProject_RealTime.nb](https://github.com/soltaniehha/precipitation/blob/master/finalProject_RealTime.nb).
 
 ## Project Description
 
