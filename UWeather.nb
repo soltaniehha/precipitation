@@ -1,0 +1,219 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8219,        210]
+NotebookOptionsPosition[      7939,        195]
+NotebookOutlinePosition[      8321,        212]
+CellTagsIndexPosition[      8278,        209]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"output", " ", "=", " ", 
+    RowBox[{"Quiet", "@", 
+     RowBox[{"CreateDirectory", "[", 
+      RowBox[{"FileNameJoin", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"NotebookDirectory", "[", "]"}], ",", 
+         "\"\<imageDataUWeather\>\""}], "}"}], "]"}], "]"}]}]}], ";"}], 
+  "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"boston", " ", "=", " ", 
+    RowBox[{"LatitudeLongitude", "[", 
+     RowBox[{"GeoPosition", "[", 
+      NamespaceBox["LinguisticAssistant",
+       DynamicModuleBox[{WolframAlphaClient`Private`query$$ = "Boston,MA", 
+        WolframAlphaClient`Private`boxes$$ = TemplateBox[{"\"Boston\"", 
+          RowBox[{"Entity", "[", 
+            RowBox[{"\"City\"", ",", 
+              RowBox[{"{", 
+                
+                RowBox[{
+                 "\"Boston\"", ",", "\"Massachusetts\"", ",", 
+                  "\"UnitedStates\""}], "}"}]}], "]"}], 
+          "\"Entity[\\\"City\\\", {\\\"Boston\\\", \\\"Massachusetts\\\", \
+\\\"UnitedStates\\\"}]\"", "\"city\""}, "Entity"], 
+        WolframAlphaClient`Private`allassumptions$$ = {}, 
+        WolframAlphaClient`Private`assumptions$$ = {}, 
+        WolframAlphaClient`Private`open$$ = {1, 2}}, 
+        DynamicBox[ToBoxes[
+          AlphaIntegration`LinguisticAssistantBoxes["", 1, 
+           Dynamic[WolframAlphaClient`Private`query$$], 
+           Dynamic[WolframAlphaClient`Private`boxes$$], 
+           Dynamic[WolframAlphaClient`Private`allassumptions$$], 
+           Dynamic[WolframAlphaClient`Private`assumptions$$], 
+           Dynamic[WolframAlphaClient`Private`open$$]], StandardForm],
+         ImageSizeCache->{101., {10., 17.}},
+         TrackedSymbols:>{
+          WolframAlphaClient`Private`query$$, 
+           WolframAlphaClient`Private`boxes$$, 
+           WolframAlphaClient`Private`allassumptions$$, 
+           WolframAlphaClient`Private`assumptions$$, 
+           WolframAlphaClient`Private`open$$}],
+        DynamicModuleValues:>{},
+        UndoTrackedVariables:>{WolframAlphaClient`Private`open$$}],
+       BaseStyle->{"Deploy"},
+       DeleteWithContents->True,
+       Editable->False,
+       SelectWithContents->True], "]"}], "]"}]}], ";"}], "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"rangeMap", " ", "=", " ", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "73.91206246765324`"}], ",", 
+        RowBox[{"-", "69.918814619936`"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"40.595649758656826`", ",", "43.983688560795684`"}], "}"}]}], 
+     "}"}]}], ";"}], "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"key", " ", "=", " ", "\"\<4fcbdefdad30b60b\>\""}], ";"}], 
+  "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"conditionURL", " ", "=", " ", 
+    RowBox[{"StringJoin", "[", "\n", "\t", 
+     RowBox[{
+     "\"\<http://api.wunderground.com/api/\>\"", ",", "key", ",", 
+      "\"\</conditions/q/\>\"", ",", 
+      RowBox[{"ToString", "@", 
+       RowBox[{"boston", "[", 
+        RowBox[{"[", 
+         RowBox[{"1", ",", "1"}], "]"}], "]"}]}], "\n", "\t", ",", 
+      "\"\<,\>\"", ",", 
+      RowBox[{"ToString", "@", 
+       RowBox[{"boston", "[", 
+        RowBox[{"[", 
+         RowBox[{"1", ",", "2"}], "]"}], "]"}]}], ",", "\"\<.json\>\""}], 
+     "\n", "]"}]}], ";"}], "\n", "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"url", " ", ":=", " ", 
+    RowBox[{"StringJoin", "[", "\n", "\t", 
+     RowBox[{
+     "\"\<http://api.wunderground.com/api/\>\"", ",", "key", ",", 
+      "\"\</radar/image.gif?maxlat=\>\"", "\n", "\t", ",", 
+      RowBox[{"ToString", "@", 
+       RowBox[{"rangeMap", "[", 
+        RowBox[{"[", 
+         RowBox[{"2", ",", "2"}], "]"}], "]"}]}], ",", "\"\<&maxlon=\>\"", 
+      ",", 
+      RowBox[{"ToString", "@", 
+       RowBox[{"rangeMap", "[", 
+        RowBox[{"[", 
+         RowBox[{"1", ",", "2"}], "]"}], "]"}]}], "\n", "\t", ",", 
+      "\"\<&minlat=\>\"", ",", 
+      RowBox[{"ToString", "@", 
+       RowBox[{"rangeMap", "[", 
+        RowBox[{"[", 
+         RowBox[{"2", ",", "1"}], "]"}], "]"}]}], ",", "\"\<&minlon=\>\"", 
+      ",", 
+      RowBox[{"ToString", "@", 
+       RowBox[{"rangeMap", "[", 
+        RowBox[{"[", 
+         RowBox[{"1", ",", "1"}], "]"}], "]"}]}], "\n", "\t", ",", 
+      "\"\<&width=640&height=480&rainsnow=0&timelabel=0&reproj.automerc=1\>\"\
+"}], "\n", "]"}]}], ";"}], "\n"}], "\n", 
+ RowBox[{
+  RowBox[{"For", "[", 
+   RowBox[{
+    RowBox[{"k", "=", "1"}], " ", ",", " ", 
+    RowBox[{"k", "\[LessEqual]", "140"}], " ", ",", " ", 
+    RowBox[{"k", "++"}], " ", ",", "  ", "\n", 
+    RowBox[{
+     RowBox[{"Pause", "[", "360", "]"}], ";", "\n", "\t", 
+     RowBox[{"While", "[", 
+      RowBox[{"True", ",", "\n", "\t\t", 
+       RowBox[{
+        RowBox[{"tempName", "=", "\n", "\t\t\t", 
+         RowBox[{
+          RowBox[{"FileNameJoin", "[", 
+           RowBox[{"{", 
+            RowBox[{"output", ",", 
+             RowBox[{"StringJoin", "[", 
+              RowBox[{
+               RowBox[{"DateString", "[", "\"\<Year\>\"", "]"}], ",", 
+               RowBox[{"DateString", "[", "\"\<Month\>\"", "]"}], "\n", 
+               "\t\t\t", ",", 
+               RowBox[{"DateString", "[", "\"\<Day\>\"", "]"}], ",", 
+               RowBox[{"DateString", "[", "\"\<Hour24\>\"", "]"}], ",", 
+               RowBox[{"DateString", "[", "\"\<Minute\>\"", "]"}], ",", 
+               RowBox[{"DateString", "[", "\"\<Second\>\"", "]"}]}], "]"}]}], 
+            "}"}], "]"}], "\n", "\t\t\t", "<>", "\"\<.jpg\>\""}]}], ";", 
+        "\[IndentingNewLine]", "\t\t", 
+        RowBox[{"temp", "=", 
+         RowBox[{"Import", "[", "url", "]"}]}], ";", "\n", "\t\t", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"ImageDimensions", "[", "temp", "]"}], "[", 
+            RowBox[{"[", "1", "]"}], "]"}], ">", "100"}], ",", "\n", "\t\t\t", 
+          RowBox[{
+           RowBox[{"Export", "[", 
+            RowBox[{"tempName", ",", 
+             RowBox[{"ReplacePixelValue", "[", 
+              RowBox[{"temp", ",", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"586", ";;", "640"}], ",", 
+                  RowBox[{"0", ";;", "30"}]}], "}"}], "\[Rule]", "1"}]}], 
+              "]"}]}], "]"}], ";", "\n", "\t", 
+           RowBox[{"Break", "[", "]"}]}]}], "]"}]}]}], "\n", "\t", "]"}]}]}], 
+   "\n", "]"}], ";"}]}], "Code",
+ CellChangeTimes->{{3.614307025068593*^9, 3.6143071335293217`*^9}, {
+   3.614307426972721*^9, 3.614307498193242*^9}, {3.614307536696806*^9, 
+   3.6143076008553543`*^9}, 3.614308476163329*^9, {3.614308825451054*^9, 
+   3.6143088260183372`*^9}, 3.614308866267523*^9, 3.614311626258541*^9, {
+   3.614332749330289*^9, 3.614332749924432*^9}, 3.614354898517722*^9, {
+   3.614359169797308*^9, 3.6143592214521914`*^9}, {3.614359402769512*^9, 
+   3.614359425650128*^9}, {3.614359657158589*^9, 3.614359677115623*^9}, {
+   3.614359737486004*^9, 3.614359738020225*^9}, {3.614359922471114*^9, 
+   3.614359959783558*^9}, {3.614360028671751*^9, 3.614360037399373*^9}, {
+   3.6143612972582273`*^9, 3.614361298410602*^9}, {3.614361424015459*^9, 
+   3.614361425528809*^9}, {3.6143965109894753`*^9, 3.614396557267654*^9}, {
+   3.6143971927018957`*^9, 3.6143972002733593`*^9}, {3.6143977032071753`*^9, 
+   3.614397707470174*^9}, {3.6145524871482687`*^9, 3.6145524878716307`*^9}}]
+},
+Evaluator->"backGround",
+WindowSize->{808, 652},
+WindowMargins->{{Automatic, -143}, {176, Automatic}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (June 27, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 7377, 173, 587, "Code"]
+}
+]
+*)
+
+(* End of internal cache information *)
